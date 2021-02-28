@@ -16,7 +16,7 @@ function userInput()
         wait(3)
         os.execute("cls")
     elseif confirmed_answer == false then
-        print("Sorry please try again")
+        print("Those passwords didn't match! Please try again.")
     end
 end
 
