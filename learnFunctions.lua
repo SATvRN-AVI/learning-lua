@@ -50,14 +50,19 @@ print(var1) -- When printed, it will only return one value from the function bec
 
 -- ********************************************************************
 
-local meaningOfLife = 24
+local meaningOfLife = 24 -- We assign a local variable called 'meaningOfLife' 
 
-function calculateMeaningOfLife()
-        local meaningOfLife = 42
-        print(meaningOfLife) 
-end
+function calculateMeaningOfLife() -- We declare a function named 'calculateMeaningOfLife'
+        local meaningOfLife = 42 -- In this case we declare another local variable and assign it '42' // NOTE: the scope of this variable is within the function
+        print(meaningOfLife) -- Prints the value of the variable when the function is called
+end -- Closes the declaration 
 
-calculateMeaningOfLife()
+calculateMeaningOfLife() -- This calls the function we declared above // Notice it's called before our local variable above it
 
-print(meaningOfLife)
+print(meaningOfLife) -- This prints the variable with the assigned value above
 
+--[[
+    The code on lines '60' and '62' are intentionally called in seperate order from their assignments. 
+    This is to demonstrate the different scopes of the variables 'meaningOfLife'
+    NOTE: the scope of variable 'meaningOfLife' is limited within the function and does not affect the previous variable
+]]
