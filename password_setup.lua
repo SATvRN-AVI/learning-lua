@@ -1,3 +1,5 @@
+-- ComputerCraftT Copy
+
 function wait(seconds)
     local start = os.time()
     repeat until os.time() > start + seconds
@@ -27,5 +29,6 @@ if userInput(confirmed_answer == false) then
 end
 
 userInput()
+
 
 
