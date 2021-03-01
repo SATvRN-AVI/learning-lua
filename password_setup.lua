@@ -1,9 +1,11 @@
 -- ComputerCraftT Copy
 
-function wait(seconds)
+--[[function wait(seconds)
     local start = os.time()
     repeat until os.time() > start + seconds
 end
+]]
+
 
 function userInput()
     io.write("Please enter a password: ")
@@ -15,14 +17,18 @@ function userInput()
 
     if confirmed_answer == true then
         print("Password created successfully!")
-        wait(3)
-        os.execute("cls")
+        os.startTimer(3)
+        os.pullEvent()
+        local event = os.pullEvent()
+        if event == "timer" then
+            os.execute(exitcode)
+        end
     elseif confirmed_answer == false then
         print("Sorry please try again")
     end
 end
 
-if userInput(confirmed_answer == false) then
+if userInput(false) then
     repeat
         userInput()
     until(confirmed_answer == true)
