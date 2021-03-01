@@ -1,10 +1,6 @@
 -- ComputerCraftT Copy
 
---[[function wait(seconds)
-    local start = os.time()
-    repeat until os.time() > start + seconds
-end
-]]
+
 
 
 function userInput()
@@ -17,24 +13,22 @@ function userInput()
 
     if confirmed_answer == true then
         print("Password created successfully!")
+        print("Have a nice day!")
         os.startTimer(3)
         os.pullEvent()
         local event = os.pullEvent()
         if event == "timer" then
-            os.execute(exitcode)
+            shell.run("shell","bg")
+            shell.exit()
         end
+        return
     elseif confirmed_answer == false then
-        print("Sorry please try again")
+        textutils.slowPrint("Sorry that password was incorrect!")
+        repeat
+            userInput()
+        until confirmed_answer == true
     end
 end
 
-if userInput(false) then
-    repeat
-        userInput()
-    until(confirmed_answer == true)
-end
-
 userInput()
-
-
-
+    
