@@ -1,3 +1,11 @@
+
+--[[
+    This file is notes taken on learning functions and their uses.
+    This file may be used as reference or edited upon and reuploaded for personal use.
+]]
+
+
+
 function printHelloWorld() -- This declares that 'printHelloWorld()' is a function
     print("Hello World!") -- Anything after the above line is part of the function and will be run in order of appearance when called
 end -- This ends the declaration section of a function and returns us out of said chunk

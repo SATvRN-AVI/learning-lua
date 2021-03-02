@@ -1,3 +1,8 @@
+--[[
+    This file is notes taken from learning about variables and their various uses and syntax
+    This file may be used as a reference or edited and reuploaded for personal use.
+]]
+
 MyVar = 10  -- Declare a variable and assign a value
 
 Other = 40 -- Declare another variable
