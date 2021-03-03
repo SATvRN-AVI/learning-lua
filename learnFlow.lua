@@ -1,3 +1,3 @@
-for i = 1,3 do
+for i = 1,3 do 
     print(i)
 end
