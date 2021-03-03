@@ -1,4 +1,5 @@
---[[ This file is notes taken on learning flow control and their applications
+--[[ 
+     This file is notes taken on learning flow control and their applications
      This file may be used as a reference or edited and reuploaded for personal use.
 ]]
 -- *******************************************************************
@@ -30,7 +31,7 @@ end
 
 -- *******************************************************************
 
-days = { "Monday", "Tuesday", "Wednesday","Thursday","Friday"} -- We assign a table with the days of the week. *SEE TABLE NOTES**
+days = { "Monday", "Tuesday", "Wednesday","Thursday","Friday"} -- We assign a table with the days of the week. *SEE 'learnTables.lua'**
 
 --[[
     Below we take 'i' which indexes the values of the array above. We then use the 'v' iterator
@@ -94,7 +95,7 @@ repeat
         print("Not dead. Curr HP " .. playerHP) -- prints the current HP of the player
         playerHP = playerHP - 1 -- This line will remove one hit point from the players life total during the loop
     end
-until isPlayerDead == false
+until isPlayerDead == true
 
 -- *******************************************************************
 
